@@ -10,3 +10,6 @@ Some useful pages I found while developing the blog:
 <https://favicon.io/favicon-generator/>
 
 <https://www.cleanpng.com>
+
+<p style="font-size:100px">&#128540;</p>
+
