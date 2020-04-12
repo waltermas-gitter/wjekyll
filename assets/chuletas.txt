@@ -1,0 +1,175 @@
+﻿**** generales ****
+xdg-open, kde-open, gnome-open
+gksudo
+sudo shutdown -h +2 (2 minutos), sudo shutdown -h 23:00
+shutdown -c, para cancelar
+loadkeys es
+dpkg-reconfigure keyboard-configuration
+dpkg-reconfigure tzdata
+
+
+cinnamon --replace --display=:0
+
+
+
+
+**** archivos importantes ****
+env , lista todas las variables de entorno
+~/.bashrc, recarga con source ~/.bashrc
+/etc/bash.bashrc >>> system-wide 
+export PATH="$PATH:/home/user/bin"
+PS1 , forma del prompt, ver con cat ~/.bashrc | grep PS1
+\u username, \h hostname, and \w working directory
+UID , usuario , [ $UID -ne 0 ] , check for super user
+OLDIFS=$IFS
+IFS=$'\n'
+-----
+IFS=$OLDIFS
+.xinitrc , lanza el escritorio
+
+
+
+
+***info ****
+lshw
+free  >>> ram, swap
+sudo fdisk -l, muestra particiones
+sudo lsblk -no NAME,UUID,LABEL
+df -h, muestra espacio
+du -sh directorio, muestra el tamaño del dir
+uname -r , kernel version
+cat /etc/*release
+lspci, lsusb
+mount
+service --status-all
+
+
+
+
+**** permisos ****
+r-- 4= lectura
+-w- 2= escritura
+--x 1= ejecución
+6 (4+2)= lectura y escritura
+5 (4+1)= lectura y ejecución
+3 (2+1)= escritura y ejecución
+7 (4+2+1)= lectura, escritura y ejecución
+u owner, g group, o others, a all
+r read access, w write access, x execute access
+ej chmod g+rw miarchivo.txt
+chmod ugo+x programa.sh
+chmod u=rwx g=rw o=r filename
+
+
+
+
+**** procesos ****
+ps -ef, ps -f -u waltermas , pstree, top
+jobs, fg %1 , bg %1
+CTRL+Z, manda el proceso a background
+kill -l, lista todas las señales (mejor parece man kill)
+kill -9 PID (force)
+xkill, killall, pkill
+pgrep firefox, devuelve el pid
+
+
+
+
+**** ls ****
+ls -d */ , solo directorios
+ls -l *.jpg
+ls -l | less
+-a all
+-h human
+-S sort by size
+-X sort by extension
+-t sort by time
+-r sort reverse!
+-R recursive
+ls -l --time=atime /media/D300/libros/libros2.tcf
+ls -lhd1 $PWD/*.*  >>> full path
+
+
+
+
+**** find ****
+find . -maxdepth 1 -type d ! -iname ".*", muestra dir no ocultos
+find . -mtime -2, archivos modificados los ultimos dos dias
+find . -size +2M, archivos de mas de dos megas (k,M,G)
+find /home/walter/Pictures/ -iname *hermosa*zoo* -exec kde-open {} \;
+grep -li setcentral * # i-iname, r-recursive
+2>/dev/null, no muestra errores de permisos
+
+
+
+
+**** archivos *****
+ln -s archivoOriginal accesodirecto
+readlink xxxx, muestra el archivo original
+readlink -f myfile.txt| xclip # copia path al clipper
+md5sum filename
+md5sum filename file_sum.md5  #guarda el resultado
+md5sum -c file_sum.md5
+tar -zcvf nombre-archivo.tar.gz nombre-directorio
+descomprimir: tar -xvzf miarcho.tar.gz
+
+
+
+
+**** argumentos ****
+$# numero de argumentos
+$@ todos los argumentos
+$0 nombre del script
+despues del 9: ${10}
+$? valor de retorno de error del ultimo script
+
+
+
+
+**** paquetes ****
+dpkg -i xxxxx.deb
+dpkg -l |grep xxxxxxxx saber si esta instalado un paquete
+dpkg -s xxxxxx info sobre paquete (--status)
+dpkg -S xxxxxxxx buscar paquete (--search)
+whereis , donde esta instalado un paquete
+which , donde esta el comando
+
+
+
+
+**** matematica ****
+let result=no1+no2
+result=$[ no1 + no2 ], result=$[ $no1 + 5 ], result=$(( no1 + 50 ))
+result=`expr 3 + 4`, result=$(expr $no1 + 5)
+bc -i , calculadora interactiva
+echo "4 * 0.56" | bc, echo "sqrt(100)" | bc #Square root, echo "10^10" | bc #Square
+number=$RANDOM
+
+
+
+
+**** chroot ****
+sudo mount /dev/sda1 /mnt
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+sudo chroot /mnt
+para internet modificar /etc/resolv.conf
+nameserver 208.67.222.222
+nameserver 208.67.220.220
+para DISPLAY: xhost +
+
+
+
+
+cadaver http://walterm.owncloud.arvixe.com/remote.php/webdav/
+cadaver https://dav.box.com/dav
+sudo apt-get install davfs2
+mount -t davfs https://dav.box.com/dav box
+wget -O /tmp/instalador http://tinyurl.com/gdinstaladorcomandos
+
+
+uso:
+chuletas xxxxx
+chuletas | less
+chuletas | grep paquetes -B 3 -A 5

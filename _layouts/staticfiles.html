@@ -1,5 +1,7 @@
 <h1>Esto es staticfiles</h1>
 
+{{ content }}
+
 {% for file in site.static_files %}
     {{ file.path }} <br>
 {% endfor %}
