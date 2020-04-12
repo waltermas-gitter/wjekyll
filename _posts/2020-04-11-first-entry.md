@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "first entry"
+categories: social
 ---
 
 Well, this is my first entry. I'm not sure that I will be able to post content regulary. But I will try.
