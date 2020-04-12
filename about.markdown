@@ -3,8 +3,8 @@ layout: page
 title: About
 permalink: /about/
 ---
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+{% comment %}
+This is the base **Jekyll** theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /
@@ -16,3 +16,10 @@ You can find the source code for Jekyll at GitHub:
 
 
 [jekyll-organization]: https://github.com/jekyll
+{% endcomment %}
+
+On this blog you can find all that I actually learn in my usual live.
+
+En este blog encontraras lo que voy aprendiendo habitualmente dia a dia.
+
+Escribo un poco en castellano y un poco en english.

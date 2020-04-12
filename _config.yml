@@ -29,7 +29,7 @@ description: >-
     english language, portuguese language
     sexy girls
     in that order.
-baseurl: "wjekyll" # the subpath of your site, e.g. /blog
+baseurl: /wjekyll # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: waltermas
 github_username:  waltermas-gitter
@@ -38,6 +38,7 @@ github_username:  waltermas-gitter
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
