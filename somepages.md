@@ -11,5 +11,7 @@ Some useful pages I found while developing the blog:
 
 <https://www.cleanpng.com>
 
+<https://www.w3schools.com/charsets/ref_emoji.asp>
+
 <p style="font-size:100px">&#128540;</p>
 

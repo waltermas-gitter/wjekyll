@@ -21,14 +21,10 @@
 title: waltermas blog
 email: waltermas@hotmail.com
 description: >-
-    This is a blog I want to share with you.
-    It's about my passions
-    coding
-    chess
-    carpentry
-    english language, portuguese language
-    sexy girls
-    in that order.
+    This blog is not for you.
+    I did it for me. Because I liked it.
+    And I was good at it.
+    
 baseurl: /wjekyll # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: waltermas
