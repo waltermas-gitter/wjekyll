@@ -161,15 +161,3 @@ para DISPLAY: xhost +
 
 
 
-
-cadaver http://walterm.owncloud.arvixe.com/remote.php/webdav/
-cadaver https://dav.box.com/dav
-sudo apt-get install davfs2
-mount -t davfs https://dav.box.com/dav box
-wget -O /tmp/instalador http://tinyurl.com/gdinstaladorcomandos
-
-
-uso:
-chuletas xxxxx
-chuletas | less
-chuletas | grep paquetes -B 3 -A 5

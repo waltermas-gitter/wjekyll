@@ -23,3 +23,4 @@ dfdfsdfsd
 <p class = "red">Esto es rojo</p>
 <p class = "thick">komodo funciona mejor con html files</p>
 <p>cambie el formato abajo a html para que me haga autocomple</p>
+
