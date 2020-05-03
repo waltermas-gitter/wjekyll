@@ -16,7 +16,7 @@ cinnamon --replace --display=:0
 **** archivos importantes ****
 env , lista todas las variables de entorno
 ~/.bashrc, recarga con source ~/.bashrc
-/etc/bash.bashrc >>> system-wide 
+/etc/bash.bashrc >>> system-wide
 export PATH="$PATH:/home/user/bin"
 PS1 , forma del prompt, ver con cat ~/.bashrc | grep PS1
 \u username, \h hostname, and \w working directory
@@ -99,6 +99,7 @@ find . -size +2M, archivos de mas de dos megas (k,M,G)
 find /home/walter/Pictures/ -iname *hermosa*zoo* -exec kde-open {} \;
 grep -li setcentral * # i-iname, r-recursive
 2>/dev/null, no muestra errores de permisos
+locate
 
 
 
@@ -158,6 +159,3 @@ para internet modificar /etc/resolv.conf
 nameserver 208.67.222.222
 nameserver 208.67.220.220
 para DISPLAY: xhost +
-
-
-

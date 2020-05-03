@@ -1,0 +1,24 @@
+---
+layout: post
+---
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 50px;
+  }
+  .grid-item {
+    white-space: pre;
+  }
+</style>
+
+<div class="container">
+  <div class="grid-item">
+    {% include_relative {{ page.lyrics-path}} %}
+  </div>
+  <div class="grid-item">
+  {{ content }}
+  </div>
+
+</div>
